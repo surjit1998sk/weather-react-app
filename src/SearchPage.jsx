@@ -96,10 +96,10 @@ const SearchPage = () => {
       </button>
       {weather && (
         <div>
-          <h2>{weather.name}</h2>
-          <p>{weather.weather[0].description}</p>
-          <p>Temperature: {(weather.main.temp - 273.15).toFixed(2)}°C</p>
-          <p>Feels like: {(weather.main.feels_like - 273.15).toFixed(2)}°C</p>
+          <h2>{weather?.name}</h2>
+          <p>{weather?.description}</p>
+          <p>Temperature: {(weather?.temp - 273.15).toFixed(2)}°C</p>
+          <p>Feels like: {(weather?.feels_like - 273.15).toFixed(2)}°C</p>
         </div>
       )}
       {error && <div>{error}</div>}
